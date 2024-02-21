@@ -7,6 +7,12 @@ public class EmployeeDetails {
 	
 	
 	
+	public EmployeeDetails(String username, String passWord, String fullName) {
+		
+		this.username = username;
+		this.passWord = passWord;
+		this.fullName = fullName;
+	}
 	public String getUsername() {
 		return username;
 	}
