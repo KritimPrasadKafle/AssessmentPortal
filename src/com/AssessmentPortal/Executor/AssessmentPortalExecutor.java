@@ -31,6 +31,17 @@ public class AssessmentPortalExecutor {
 		   userName=sc.next();
 		   System.out.println("Enter password:");
 		   password=sc.next();
+<<<<<<< HEAD
+		  
+		   EmployeeDetails empDetails=new EmployeeDetails(userName,password);
+		   EmployeeCredentials validate=new EmployeeCredentials();
+		   EmployeeDetails empdetails=validate.validateEmployee(empDetails);
+		   if(empdetails!=null)
+		   {
+			   
+			   AssessmentQuestion question=new AssessmentQuestion();
+			   question.showAssessment(empdetails);
+=======
 		   
 		   EmployeeDetails empDetails=new EmployeeDetails(userName,password);
 		   EmployeeCredentials validate=new EmployeeCredentials();
@@ -38,10 +49,14 @@ public class AssessmentPortalExecutor {
 		   if(validate.validateEmployee(empDetails)!=null)
 		   {
 			   assessmentQuestion.showAssessment();
+<<<<<<< HEAD
 			   System.out.println("Hi " + empDetails.getUsername() + ",Your score is " + assessmentQuestion.getPercentage() + "%.");
 			   employeeMarkDetails.add(new EmployeeMarksDetails(empDetails.getFullName(), assessmentQuestion.getPercentage()));
 			   System.out.println(employeeMarkDetails);
 			   
+=======
+>>>>>>> c930f2a9d1b88e9cc8cbf56be1fc33a25d3a082c
+>>>>>>> 77ed5fea475b19f6e8c3e0e32a0f027468084713
 		   }
 		   else
 		   {
