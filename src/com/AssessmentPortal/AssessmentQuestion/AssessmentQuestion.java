@@ -7,8 +7,8 @@ import java.util.Scanner;
 public class AssessmentQuestion {
 	
 	
-	public static Map<Integer,String> enteredAnswer;
-	public static Map<Integer,String> actualAnswer;
+	public static Map<Integer,String> enteredAnswer = new HashMap<>();
+	public static Map<Integer,String> actualAnswer = new HashMap<>();
 	
 	
 	

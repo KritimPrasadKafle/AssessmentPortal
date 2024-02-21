@@ -5,9 +5,11 @@ import java.util.ArrayList;
 import com.AssessmentPortal.EmployeeDetails.EmployeeDetails;
 
 public class EmployeeCredentials {
-   static public ArrayList<EmployeeDetails> employeeDetails=new ArrayList<>();
+   public static ArrayList<EmployeeDetails> employeeDetails;
    static {
-	   EmployeeDetails emp1=new EmployeeDetails("Nivetha","123","Nivetha");
+	   employeeDetails = new ArrayList<>();
+	   employeeDetails.add(new EmployeeDetails("Kritim", "1234", "KritimKafle"));
+	   
    }
    EmployeeDetails employee;
    public EmployeeCredentials()

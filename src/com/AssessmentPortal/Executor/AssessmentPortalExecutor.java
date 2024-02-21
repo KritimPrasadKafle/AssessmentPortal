@@ -1,6 +1,7 @@
 package com.AssessmentPortal.Executor;
 import java.util.Scanner;
 
+import com.AssessmentPortal.AssessmentQuestion.AssessmentQuestion;
 import com.AssessmentPortal.EmployeeDetails.EmployeeDetails;
 public class AssessmentPortalExecutor {
 
@@ -10,6 +11,7 @@ public class AssessmentPortalExecutor {
 	   String password;
 	   String userFullname;
 	   boolean flag;
+	   
 	   Scanner sc=new Scanner(System.in);
 	   do {
 	   System.out.println("1.Login");
@@ -22,13 +24,13 @@ public class AssessmentPortalExecutor {
 		   userName=sc.next();
 		   System.out.println("Enter password:");
 		   password=sc.next();
-		   System.out.println("Enter your fullName:");
-		   userFullname=sc.next();
-		   EmployeeDetails empDetails=new EmployeeDetails(userName,password,userFullname);
+		   
+		   EmployeeDetails empDetails=new EmployeeDetails(userName,password);
 		   EmployeeCredentials validate=new EmployeeCredentials();
+		   AssessmentQuestion assessmentQuestion = new AssessmentQuestion();
 		   if(validate.validateEmployee(empDetails)!=null)
 		   {
-			   
+			   assessmentQuestion.showAssessment();
 		   }
 		   else
 		   {
