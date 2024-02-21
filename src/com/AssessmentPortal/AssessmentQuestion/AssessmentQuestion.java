@@ -9,8 +9,13 @@ import com.AssessmentPortal.EmployeeDetails.EmployeeDetails;
 public class AssessmentQuestion {
 	
 	
+<<<<<<< HEAD
 	public static Map<Integer,String> enteredAnswer=new HashMap<>();
 	public static Map<Integer,String> actualAnswer=new HashMap<>();
+=======
+	public static Map<Integer,String> enteredAnswer = new HashMap<>();
+	public static Map<Integer,String> actualAnswer = new HashMap<>();
+>>>>>>> c930f2a9d1b88e9cc8cbf56be1fc33a25d3a082c
 	
 	
 	

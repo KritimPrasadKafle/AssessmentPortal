@@ -13,6 +13,16 @@ public EmployeeDetails(String username, String passWord) {
 		
 	}
 
+	public EmployeeDetails(String username, String passWord) {
+		
+		this.username = username;
+		this.passWord = passWord;
+		
+	}
+
+	
+	
+	
 	public EmployeeDetails(String username, String passWord, String fullName) {
 		
 		this.username = username;
@@ -20,9 +30,9 @@ public EmployeeDetails(String username, String passWord) {
 		this.fullName = fullName;
 	}
 
-	
-	
-	
+
+
+
 	public EmployeeDetails() {
 		
 		// TODO Auto-generated constructor stub

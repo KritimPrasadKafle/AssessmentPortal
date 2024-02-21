@@ -5,10 +5,16 @@ import java.util.ArrayList;
 import com.AssessmentPortal.EmployeeDetails.EmployeeDetails;
 
 public class EmployeeCredentials {
-   static public ArrayList<EmployeeDetails> employeeDetails=new ArrayList<>();
+   public static ArrayList<EmployeeDetails> employeeDetails;
    static {
+<<<<<<< HEAD
 	   EmployeeDetails emp1=new EmployeeDetails("Nivetha","123","Nivetha");
 	   employeeDetails.add(emp1);
+=======
+	   employeeDetails = new ArrayList<>();
+	   employeeDetails.add(new EmployeeDetails("Kritim", "1234", "KritimKafle"));
+	   
+>>>>>>> c930f2a9d1b88e9cc8cbf56be1fc33a25d3a082c
    }
    EmployeeDetails employee;
    public EmployeeCredentials()
