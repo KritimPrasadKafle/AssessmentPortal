@@ -4,11 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+import com.AssessmentPortal.EmployeeDetails.EmployeeDetails;
+
 public class AssessmentQuestion {
 	
 	
-	public static Map<Integer,String> enteredAnswer;
-	public static Map<Integer,String> actualAnswer;
+	public static Map<Integer,String> enteredAnswer=new HashMap<>();
+	public static Map<Integer,String> actualAnswer=new HashMap<>();
 	
 	
 	
@@ -30,13 +32,16 @@ public class AssessmentQuestion {
 	
 	}
 	
+	public AssessmentQuestion() {
+		
+	}
 	
 	
-	public void showAssessment() {
+	public void showAssessment(EmployeeDetails employee) {
 		
 	System.out.println("Here is your Assessment Questions");
 	Scanner scanner = new Scanner(System.in);
-	int score = 0;
+	double score = 0;
 	
 	System.out.println("Question 1: Which of the following is the correct way to declare and initialize an array in Java?");
     System.out.println("a) int array = {1, 2, 3};");
@@ -72,8 +77,8 @@ public class AssessmentQuestion {
     
     
     System.out.println("\nQuestion 4:What is the output of the following code snippet?");
-    String str1 = "Hello";
-    String str2 = "World";
+    System.out.println("String str1 = \"Hello\"");
+    System.out.println("String str2 = \"World\"");
     System.out.println("System.out.println(str1.concat(str2))");
     System.out.println("a) Hello World");
     System.out.println("b) Hello.concat(World)");
@@ -85,8 +90,8 @@ public class AssessmentQuestion {
     
     
 	System.out.println("\nQuestion 5 : What is the output of the following code snippet?");
-	String str = "Java";
-	String str12 = "Programming";
+	System.out.println("String str = \"Java\"");
+	System.out.println("String str12 = \"Programming\"");
 	System.out.println("System.out.println(str1.length() + str2.length())");
 	System.out.println("a) 13");
 	System.out.println("b) 12");
@@ -96,8 +101,8 @@ public class AssessmentQuestion {
 	enteredAnswer.put(5, answer5);
 	
 	System.out.println("\nQuestion 6 : What is the output of the following code snippet?");
-	int x = 7;
-	int y = 3;
+	System.out.println("int x = 7");
+	System.out.println("int y = 3");
 	System.out.println("System.out.println(x / y + \" remainder \" + x % y)");
 	System.out.println("a) 2 remainder 1");
 	System.out.println("b) 2.33 remainder 1");
@@ -108,8 +113,8 @@ public class AssessmentQuestion {
 	
 	
 	System.out.println("\nQuestion 7 : What is the output of the following code snippet?");
-	boolean flag1 = true;
-	boolean flag2 = false;
+	System.out.println("boolean flag1 = true");
+	System.out.println("boolean flag2 = false");
 	System.out.println("System.out.println(!flag1 || flag2)");
 	System.out.println("a) true");
 	System.out.println("b) false");
@@ -120,7 +125,7 @@ public class AssessmentQuestion {
 
 	
 	System.out.println("\nQuestion 8 : What is the output of the following code snippet?");
-	int[] numbers = {1, 2, 3, 4, 5};
+	System.out.println("int[] numbers = {1, 2, 3, 4, 5}");
 	System.out.println("System.out.println(numbers[2])");
 	System.out.println("a) 1");
 	System.out.println("b) 2");
@@ -131,7 +136,7 @@ public class AssessmentQuestion {
 
 	
 	System.out.println("\nQuestion 9 : What is the output of the following code snippet?");
-	String str13 = "Hello, World!";
+	System.out.println("String str13 = \"Hello, World!\"");
 	System.out.println("System.out.println(str.substring(0, 5))");
 	System.out.println("a) Hello");
 	System.out.println("b) World");
@@ -141,11 +146,11 @@ public class AssessmentQuestion {
 	enteredAnswer.put(9, answer9);
 	
 	System.out.println("\nQuestion 10 : What is the output of the following code snippet?");
-	double radius = 5.0;
+	System.out.println("double radius = 5.0");
 	System.out.println("System.out.println(\"The area of the circle: \" + Math.PI * Math.pow(radius, 2))");
 	System.out.println("a) The area of the circle: 78.54");
 	System.out.println("b) The area of the circle: 50.27");
-	System.out.println("c) The area of the circle: " + Math.PI * Math.pow(radius, 2));
+	System.out.println("c) The area of the circle:  5.0");
 	System.out.println("d) The area of the circle: radius * radius");
 	String answer10 = scanner.next();
 	enteredAnswer.put(10, answer10);
@@ -157,8 +162,9 @@ public class AssessmentQuestion {
     		score++;
     	}
     }
-    int percentage=(score/10)*100;
-    System.out.println("Your marks: "+percentage+"%");
+    System.out.println(score);
+    double percentage=(score/10)*100;
+    System.out.println("Hi"+employee.getFullName() +"your assessment marks is "+percentage+"%");
     
 	}
 	
