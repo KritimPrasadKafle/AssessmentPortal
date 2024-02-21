@@ -4,7 +4,44 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+import com.AssessmentPortal.EmployeeDetails.EmployeeDetails;
+
 public class AssessmentQuestion {
+	
+	private static  double score = 0.0;
+	private static double percentage = 0.0;
+	
+	
+	
+	
+	
+	
+	
+	public static double getPercentage() {
+		return percentage;
+	}
+
+
+
+	public static void setPercentage(double percentage) {
+		AssessmentQuestion.percentage = percentage;
+	}
+
+
+
+	public double getScore() {
+		return score;
+	}
+
+
+
+	public void setScore(double score) {
+		this.score = score;
+	}
+
+
+
+	EmployeeDetails employeeDetails = new EmployeeDetails();
 	
 	
 	public static Map<Integer,String> enteredAnswer = new HashMap<>();
@@ -36,7 +73,7 @@ public class AssessmentQuestion {
 		
 	System.out.println("Here is your Assessment Questions");
 	Scanner scanner = new Scanner(System.in);
-	int score = 0;
+	
 	
 	System.out.println("Question 1: Which of the following is the correct way to declare and initialize an array in Java?");
     System.out.println("a) int array = {1, 2, 3};");
@@ -155,10 +192,13 @@ public class AssessmentQuestion {
     	if(actualAnswer.get(map).equals(enteredAnswer.get(map)))
     	{
     		score++;
+    		
+    	    
     	}
+    	
     }
-    int percentage=(score/10)*100;
-    System.out.println("Your marks: "+percentage+"%");
+    System.out.println(score);
+    percentage=(score/10)*100;
     
 	}
 	

@@ -1,16 +1,23 @@
 package com.AssessmentPortal.Executor;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.AssessmentPortal.AssessmentQuestion.AssessmentQuestion;
 import com.AssessmentPortal.EmployeeDetails.EmployeeDetails;
 public class AssessmentPortalExecutor {
-
+	
+	
+	public static ArrayList<EmployeeMarksDetails> employeeMarkDetails = new ArrayList<>();
    public static void main(String[] args)
    {
+	   
+	   
+	   
 	   String userName;
 	   String password;
 	   String userFullname;
 	   boolean flag;
+	   
 	   
 	   Scanner sc=new Scanner(System.in);
 	   do {
@@ -31,6 +38,10 @@ public class AssessmentPortalExecutor {
 		   if(validate.validateEmployee(empDetails)!=null)
 		   {
 			   assessmentQuestion.showAssessment();
+			   System.out.println("Hi " + empDetails.getUsername() + ",Your score is " + assessmentQuestion.getPercentage() + "%.");
+			   employeeMarkDetails.add(new EmployeeMarksDetails(empDetails.getFullName(), assessmentQuestion.getPercentage()));
+			   System.out.println(employeeMarkDetails);
+			   
 		   }
 		   else
 		   {
