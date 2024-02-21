@@ -34,7 +34,7 @@ public class AssessmentQuestion {
 	
 	public void showAssessment() {
 		
-	
+	System.out.println("Here is your Assessment Questions");
 	Scanner scanner = new Scanner(System.in);
 	int score = 0;
 	
@@ -150,8 +150,16 @@ public class AssessmentQuestion {
 	String answer10 = scanner.next();
 	enteredAnswer.put(10, answer10);
 
-
-
+    for(Integer map:actualAnswer.keySet())
+    {
+    	if(actualAnswer.get(map).equals(enteredAnswer.get(map)))
+    	{
+    		score++;
+    	}
+    }
+    int percentage=(score/10)*100;
+    System.out.println("Your marks: "+percentage+"%");
+    
 	}
 	
     		

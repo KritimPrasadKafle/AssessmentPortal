@@ -3,11 +3,7 @@ import java.util.Scanner;
 
 import com.AssessmentPortal.EmployeeDetails.EmployeeDetails;
 public class AssessmentPortalExecutor {
-<<<<<<< HEAD
-	
-	
 
-=======
    public static void main(String[] args)
    {
 	   String userName;
@@ -68,5 +64,5 @@ public class AssessmentPortalExecutor {
 	   
    }
    
->>>>>>> 0d05f06ad35809df853458df1314cc4cd326cf8c
+
 }

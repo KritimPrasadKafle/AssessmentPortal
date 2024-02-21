@@ -7,18 +7,14 @@ public class EmployeeDetails {
 	
 	
 	
-<<<<<<< HEAD
-	
-	
-=======
->>>>>>> 0d05f06ad35809df853458df1314cc4cd326cf8c
+
 	public EmployeeDetails(String username, String passWord, String fullName) {
 		
 		this.username = username;
 		this.passWord = passWord;
 		this.fullName = fullName;
 	}
-<<<<<<< HEAD
+
 	
 	
 	
@@ -29,8 +25,7 @@ public class EmployeeDetails {
 
 
 
-=======
->>>>>>> 0d05f06ad35809df853458df1314cc4cd326cf8c
+
 	public String getUsername() {
 		return username;
 	}
